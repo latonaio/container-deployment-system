@@ -5,7 +5,10 @@ container-deployment-system がセットアップされた端末群において�
 ## container-deployment-system のアーキテクチャ  
 コンテナデプロイメントシステムのアーキテクチャ図です。  
 図内の赤い矢印は、コンテナデプロイのリクエストが行われてから、実際にエッジ端末間でコンテナがデプロイされるまでの順序を示しています。
-なお、順番は以下の通りです。  
+
+![deployment-system](documents/container_deployment_system.drawio.png)
+
+図内の赤い矢印の詳細順序は以下の通りです。   
 ①ui-frontend-for-deployment-system（デプロイ元）   
 ②ui-backend-for-deployment-system（デプロイ元）  
 （RabbitMQ）  
@@ -19,7 +22,6 @@ container-deployment-system がセットアップされた端末群において�
 （RabbitMQ）  
 ⑧docker-private-registry-kube（デプロイ元）    
 ⑨docker-private-registry-kube（デプロイ先）  
-![deployment-system](documents/container_deployment_system.drawio.png)
 
 ## container-deployment-system に含まれるリソース
 
