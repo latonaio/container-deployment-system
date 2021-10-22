@@ -37,3 +37,10 @@ container-deployment-system には、以下の マイクロサービス等 の�
 ・[titaniadb-sentinel](https://github.com/latonaio/titaniadb-sentinel)    
 ・[gossip-propagation-d](https://github.com/latonaio/gossip-propagation-d)    
 ・[distributed-service-discovery](https://github.com/latonaio/distributed-service-discovery)  
+
+## 動作環境
+
+* OS: Linux  
+* CPU: ARM/AMD/Intel  
+* Memory: 8GB 以上推奨  
+* Storage: 64GB 以上推奨 (OS領域とは別に主にコンテナイメージ実装・稼働のために必要です。通常のエッジ端末で64GBを確保するには、外付けMicroSDやSSDが必要です）  
