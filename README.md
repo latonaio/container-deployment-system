@@ -3,7 +3,8 @@ container-deployment-system は、クラウドから遮断されたクローズ�
 container-deployment-system がセットアップされた端末群においては、任意の端末がコンテナのデプロイ元にもデプロイ先にもなります。  
 
 ## container-deployment-system のアーキテクチャ  
-コンテナデプロイメントシステムのアーキテクチャ図です。  
+### コンテナデプロイ   
+以下の図はコンテナデプロイメントシステムのアーキテクチャ図です。  
 図内の赤い矢印は、コンテナデプロイのリクエストが行われてから、実際にエッジ端末間でコンテナがデプロイされるまでの順序を示しています。
 
 ![deployment-system](documents/container_deployment_system.drawio.png)
@@ -23,6 +24,12 @@ container-deployment-system がセットアップされた端末群において�
 ⑧docker-private-registry-kube（デプロイ元）    
 ⑨docker-private-registry-kube（デプロイ先）  
 
+### コンテナデプロイ（バージョンアップ時）
+一度デプロイしたマイクロサービスのバージョンを上げてデプロイした場合は、 エッジ端末間でコンテナデプロイが行われた後、delete-container-image-from-edge-kubeにより、古いバージョンのコンテナイメージが削除されます。  
+コンテナイメージの削除は、以下の図において緑色の矢印で示されている箇所です。 
+
+![deployment-system](documents/container_deployment_system_delete.drawio.png)
+
 ## container-deployment-system に含まれるリソース
 
 container-deployment-system には、以下の マイクロサービス等 のリソースが含まれます。  
@@ -38,7 +45,7 @@ container-deployment-system には、以下の マイクロサービス等 の�
 ・[titaniadb-sentinel](https://github.com/latonaio/titaniadb-sentinel)    
 ・[gossip-propagation-d](https://github.com/latonaio/gossip-propagation-d)    
 ・[distributed-service-discovery](https://github.com/latonaio/distributed-service-discovery)  
-
+・[delete-container-image-from-edge-kube](https://github.com/latonaio/delete-container-image-from-edge-kube)
 ## 動作環境
 
 * OS: Linux  

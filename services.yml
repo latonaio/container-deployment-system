@@ -1,0 +1,33 @@
+microservices:
+  titaniadb-sentinel:
+    scale: 1
+    startup: yes
+    always: yes
+  k8s-deployment-controller:
+    scale: 1
+    startup: yes
+    always: yes
+  docker-private-registry-kube:
+    scale: 1
+    startup: yes
+    always: yes
+  build-container-image-kube:
+    scale: 1
+    startup: yes
+    always: yes
+  push-container-image-to-docker-registry:
+    scale: 1
+    startup: yes
+    always: yes
+  delete-container-image-from-edge-kube:
+    scale: 1
+    startup: yes
+    always: yes
+  ui-backend-for-deployment-system:
+    scale: 1
+    startup: yes
+    always: yes
+  ui-frontend-for-deployment-system:
+    scale: 1
+    startup: yes
+    always: yes
