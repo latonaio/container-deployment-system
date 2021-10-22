@@ -45,3 +45,13 @@ container-deployment-system には、以下の マイクロサービス等 の�
 * CPU: ARM/AMD/Intel  
 * Memory: 8GB 以上推奨  
 * Storage: 64GB 以上推奨 (OS領域とは別に主にコンテナイメージ実装・稼働のために必要です。通常のエッジ端末で64GBを確保するには、外付けMicroSDやSSDが必要です）  
+* aion-core および 関連リソース  
+
+## services.yml  
+container-deployment-system は、aion-service-definitions/services.yml の設定をすることで、動作させることができます。  
+サンプルのservices.ymlファイルが、本レポジトリに含まれています。  
+
+## titaniadb, gossip-propagation-d, distrributed-service-discovery の起動・稼働
+titaniadb, gossip-propagation-d, distrributed-service-discovery は、上記の services.yml には含まれていません。  
+titaniadbは、kube対応されていないため、手動で起動し、稼働させる必要があります。  
+gossip-propropagation-d, distrributed-service-discovery は、Runtime 環境がOSレイヤーです。これらはsystemd等でOS層で自動起動・稼働させるか、手動で起動・稼働させる必要があります。
