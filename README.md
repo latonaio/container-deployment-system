@@ -12,13 +12,13 @@ container-deployment-system がセットアップされた端末群において�
 ①ui-frontend-for-deployment-system（デプロイ元）   
 ②ui-backend-for-deployment-system（デプロイ元）  
 （RabbitMQ）  
-③Send Anything（デプロイ元）  
-④Send Anything（デプロイ先）  
+③k8s-deployment-controller（デプロイ元）    
+④k8s-deployment-controller（デプロイ先）  
 （RabbitMQ）  
 ⑤build-container-image-kube（デプロイ先）     
 （RabbitMQ）  
-⑥Send Anything（デプロイ先）  
-⑦Send Anything（デプロイ元）    
+⑥k8s-deployment-controller（デプロイ先）  
+⑦k8s-deployment-controller（デプロイ元）    
 （RabbitMQ）  
 ⑧docker-private-registry-kube（デプロイ元）    
 ⑨docker-private-registry-kube（デプロイ先）  
@@ -29,8 +29,9 @@ container-deployment-system には、以下の マイクロサービス等 の�
 
 ・[aion-core](https://github.com/latonaio/aion-core)および関連リソース  
 ・[ui-frontend-for-deployment-system](https://github.com/latonaio/ui-frontend-for-deployment-system)     
-・[ui-backend-for-deployment-system](https://github.com/latonaio/ui-backend-for-deployment-system)      
-・[build-container-image-kube](https://github.com/latonaio/build-container-image-kube)    
+・[ui-backend-for-deployment-system](https://github.com/latonaio/ui-backend-for-deployment-system)  
+・[k8s-deployment-controller](https://github.com/latonaio/k8s-deployment-controller)  
+・[build-container-image-kube](https://github.com/latonaio/build-container-image-kube)      
 ・[push-container-image-to-docker-registry](https://github.com/latonaio/push-container-image-to-docker-registry)    
 ・[docker-private-registry-kube](https://github.com/latonaio/push-container-image-to-docker-registry)    
 ・[titaniadb](https://github.com/latonaio/titaniadb)    
